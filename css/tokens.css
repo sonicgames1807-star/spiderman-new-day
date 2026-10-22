@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Паутина — фан-сайт «Человек-паук: Новый день»
+   Design tokens. Every value used by components lives here.
+   ========================================================================== */
+:root {
+  /* background: night -> dawn */
+  --bg-0: #05070F;
+  --bg-1: #0B1020;
+  --bg-2: #121A33;
+  --dawn-bg: #1A0E14;
+
+  /* brand accents */
+  --red-500: #E2202C;
+  --red-400: #FF3B47;
+  --red-glow: rgba(226, 32, 44, .45);
+  --blue-500: #1F4FD8;
+  --blue-400: #3D6BFF;
+  --blue-glow: rgba(61, 107, 255, .40);
+  --gold-400: #F5C451;
+  --gold-glow: rgba(245, 196, 81, .35);
+  --dawn-500: #FF7A3D;
+
+  /* text (checked vs --bg-1: 17.6 / 10.4 / 5.1 : 1) */
+  --text-100: #F4F6FB;
+  --text-300: #B7BED3;
+  --text-500: #838CA6;
+
+  /* glass */
+  --glass-bg: rgba(18, 26, 51, .55);
+  --glass-border: rgba(255, 255, 255, .08);
+  --glass-highlight: rgba(255, 255, 255, .14);
+  --glass-blur: 16px;
+  --hair: rgba(255, 255, 255, .12);
+
+  /* charts (validated with dataviz/validate_palette.js on #0B1020: all checks pass) */
+  --viz-accent: #E2202C;
+  --viz-other: #3D6BFF;
+  --viz-muted: #3A4466;
+  --viz-grid: rgba(255, 255, 255, .08);
+
+  /* type */
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-text: "Manrope", system-ui, sans-serif;
+  --fs-display: 56px;
+  --fs-h1: 44px;
+  --fs-h2: 32px;
+  --fs-h3: 22px;
+  --fs-kpi: 48px;
+  --fs-body: 16px;
+  --fs-small: 13px;
+  --fs-micro: 11px;
+  --lh-text: 1.6;
+  --lh-head: 1;
+  --track-caps: .04em;
+  --track-micro: .14em;
+
+  /* space */
+  --s-4: 4px; --s-8: 8px; --s-12: 12px; --s-16: 16px; --s-24: 24px; --s-32: 32px;
+  --s-48: 48px; --s-64: 64px; --s-96: 96px; --s-128: 128px; --s-160: 160px;
+  --gutter: 16px;
+  --section-gap: 88px;
+  --max: 1320px;
+  --plate-pad: 22px;
+
+  /* shape */
+  --r-sm: 8px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+
+  /* depth */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, .45), 0 2px 6px rgba(0, 0, 0, .35);
+  --shadow-glow-red: 0 0 0 1px var(--red-glow), 0 12px 40px var(--red-glow);
+  --shadow-glow-blue: 0 0 0 1px var(--blue-glow), 0 12px 40px var(--blue-glow);
+  --shadow-glow-gold: 0 0 0 1px var(--gold-glow), 0 12px 40px var(--gold-glow);
+
+  /* motion */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast: 180ms;
+  --dur-med: 320ms;
+  --dur-slow: 700ms;
+  --stagger: 90ms;
+
+  /* layers */
+  --z-grain: 90;
+  --z-header: 60;
+  --z-modal: 80;
+  --z-progress: 70;
+  --z-preloader: 100;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --fs-h1: 60px;
+    --fs-h2: 40px;
+    --fs-h3: 24px;
+    --fs-kpi: 60px;
+    --plate-pad: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --gutter: 48px;
+    --fs-display: clamp(64px, 9vw, 160px);
+    --fs-h1: 72px;
+    --fs-h2: 48px;
+    --fs-h3: 28px;
+    --fs-kpi: 72px;
+    --fs-body: 18px;
+    --fs-small: 14px;
+    --fs-micro: 12px;
+    --section-gap: 144px;
+    --plate-pad: 30px;
+  }
+}
